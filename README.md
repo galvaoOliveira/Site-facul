@@ -1,2 +1,2 @@
 # Site-facul
-Site com grud jsp+sql
+Site com crud jsp+sql
