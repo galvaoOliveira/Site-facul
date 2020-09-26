@@ -1,0 +1,83 @@
+﻿
+<html>
+	<head>
+		<title> </title>
+
+		<script type="text/javascript">
+			function verificar()
+				{
+				var login, senha;
+
+						
+					senha = Login.txtsenha.value;
+					login = Login.txtlogin.value;
+ 					
+					if (login.length < 1)
+				  	 {
+					  alert("Preencha o login corretamente!");
+					  Login.txtlogin.style.background="yellow";
+					  Login.txtlogin.focus();
+					  return false;
+					}else{
+												Login.txtlogin.style.background="white";
+						}
+						
+				   if ( senha.length < 1)  
+				   {
+					  alert("Preencha a senha corretamente!");
+					  Login.txtsenha.style.background="yellow";
+					  Login.txtsenha.focus();
+					  return false;
+				   }else{
+					Login.txtsenha.style.background="white";
+						}
+
+						Login.submit();
+						return true;
+						
+				}
+				
+			</script>
+				
+	</head>
+
+	<body>
+	<form name="Login" method="post" action="login_verificar.jsp">
+	<font>
+
+	<p align="center">
+
+	<br>
+	<br>
+
+	<h1 align="center">Motoboy Online</h1>
+
+	<br>
+
+	<table align="center">
+
+		<tr><td>Usuário:</td>
+		<td><input type="text" name="txtlogin" size="25" > </td></tr> 
+
+		<tr><td>Senha:</td>
+		<td><input type="password" name="txtsenha" size="25"></td></tr> 
+
+		<tr><td><input type="button" value="Entrar" onclick="verificar()"></td>
+
+	</table>
+
+	<br>
+
+	<div align="center"><a href="cadastro.html" ><img src="cadastre-se.png"></div></a>
+
+	</font>
+	</form>
+	</p>
+
+	</a>
+
+	<br>
+
+	</body>
+</html>
+</html>

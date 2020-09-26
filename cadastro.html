@@ -1,0 +1,198 @@
+<html>
+	<head>
+		<title>Faça seu cadastro!</title>
+		
+			<script type="text/javascript">
+				function verificar()
+				{
+				   
+				   var nome, usuario, senha, telefone, celular, email, rg, cpf, cnpj, rua, numero, bairro;
+
+				   nome = cadastro.txtname.value;
+
+				   if ( nome.length < 1)  
+				   {
+					  alert("Preencha o campo nome corretamente!");
+					  cadastro.txtname.style.background="yellow";
+					  cadastro.txtname.focus();
+					  return false;
+				   }else{
+						cadastro.txtname.style.background="white";
+						}
+				   
+				   usuario = cadastro.txtusuario.value;
+				   
+				   if (usuario.length < 2)
+				   {
+					  alert("Preencha o campo usuário corretamente!");
+					  cadastro.txtusuario.style.background="yellow";
+					  cadastro.txtusuario.focus();
+					  return false;
+				   }else{
+						cadastro.txtusuario.style.background="white"
+						}
+						
+				   senha = cadastro.txtsenha.value;
+				   
+				   if (senha.length < 1)
+				   {
+					  alert("Preencha a senha corretamente!");
+					  cadastro.txtsenha.style.background="yellow";
+					  cadastro.txtsenha.focus();
+					  return false;
+				   }else{
+						cadastro.txtsenha.style.background="white"
+						}
+
+				   telefone = cadastro.txttelefone.value;
+				   
+				   if (telefone.length < 1)
+				   {
+					  alert("Preencha o campo telefone corretamente!");
+					  cadastro.txttelefone.style.background="yellow";
+					  cadastro.txttelefone.focus();
+					  return false;
+				   }else{
+						cadastro.txttelefone.style.background="white"
+						}
+
+				   celular = cadastro.txtcelular.value;
+				   
+				   if (celular.length < 1)
+				   {
+					  alert("Preencha o campo celular corretamente!");
+					  cadastro.txtcelular.style.background="yellow";
+					  cadastro.txtcelular.focus();
+					  return false;
+				   }else{
+						cadastro.txtcelular.style.background="white"
+						}
+					
+				   email = cadastro.txtemail.value;
+				   
+				   if  (email.indexOf("@")< 2 )
+				   {
+					  alert("Preencha o campo E-mail corretamente!");
+					  cadastro.txtemail.style.background="yellow";
+					  cadastro.txtemail.focus();
+					  return false;
+				   }else{
+						cadastro.txtemail.style.background="white"
+						}
+
+				   rg = cadastro.txtrg.value;
+				   
+				   if (rg.length < 2 ) 
+				   {
+					  alert("Preencha o campo RG corretamente!");
+					  cadastro.txtrg.style.background="yellow";
+					  cadastro.txtrg.focus();
+					  return false;
+				   }else{
+						cadastro.txtrg.style.background="white"
+						}
+
+				   cpf = cadastro.txtcpf.value;
+				   
+				   if (cpf.length < 2)
+				   {
+					  alert("Preencha o campo CPF corretamente!");
+					  cadastro.txtcpf.style.background="yellow";
+					  cadastro.txtcpf.focus();
+					  return false;
+				   }else{
+						cadastro.txtcpf.style.background="white"
+						}
+						
+				   rua = cadastro.txtrua.value;
+				   
+				   if (rua.length < 1)
+				   {
+					  alert("Preencha o campo Rua corretamente!");
+					  cadastro.txtrua.style.background="yellow";
+					  cadastro.txtrua.focus();
+					  return false;
+				   }else{
+						cadastro.txtrua.style.background="white"
+						}
+
+				   numero = cadastro.txtnumero.value;
+				   
+				   if (isNaN(numero) || numero.length < 2)
+				   {
+					  alert("Preencha o campo Número corretamente!");
+					  cadastro.txtnumero.style.background="yellow";
+					  cadastro.txtnumero.focus();
+					  return false;
+				   }else{
+						cadastro.txtnumero.style.background="white"
+						}
+
+				   bairro = cadastro.txtbairro.value;
+				   
+				   if (bairro.length < 1)
+				   {
+					  alert("Preencha o campo Bairro corretamente!");
+					  cadastro.txtbairro.style.background="yellow";
+					  cadastro.txtbairro.focus();
+					  return false;
+				   }else{
+						cadastro.txtbairro.style.background="white"
+						}
+					
+				   
+				   cadastro.submit();
+				   return true;
+
+				}
+			</script>
+	</head>
+
+	<body>
+
+	<form name="cadastro" action="grava_cadastro.jsp" method="post">
+
+	<table>
+
+		<tr><td>Nome:</td>
+		<td><input type="text" name="txtname" size="30"></td></tr> 
+
+		<tr><td>Usuário:</td>
+		<td><input type="text" name="txtusuario" size="30"></td></tr> 
+
+		<tr><td>Senha:</td>
+		<td><input type="password" name="txtsenha" size="30"></td></tr> 
+
+		<tr><td>Telefone:</td>
+		<td><input type="text" name="txttelefone" size="30"></td></tr> 
+
+		<tr><td>Celular:</td>
+		<td><input type="text" name="txtcelular" size="30"></td></tr> 
+
+		<tr><td>E-mail:</td>
+		<td><input type="text" name="txtemail" size="30"></td></tr> 
+
+		<tr><td>RG:</td>
+		<td><input type="text" name="txtrg" size="30"></td></tr> 
+
+		<tr><td>CPF:</td>
+		<td><input type="text" name="txtcpf" size="30"></td></tr>  
+
+		<tr><td>Endereço:</td></tr>	
+
+		<tr><td>Rua:</td>
+		<td><input type="text" name="txtrua" size="30"></td></tr>
+		<tr><td>Número:</td>
+		<td><input type="text" name="txtnumero" size="10"></td></tr>
+		<tr><td>Bairro:</td>
+		<td><input type="text" name="txtbairro" size="20"></td></tr>
+
+		<tr><td><input type="button" value="Salvar" onClick="verificar()"></td>
+		<td><input type="button" value="Voltar" onclick=location.href="conteudo.html"></tr></td>
+
+	</table>
+
+	</form>
+
+	</body>
+</html>
